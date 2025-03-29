@@ -4,3 +4,6 @@
 .clip-triangle {
   clip-path: polygon(100% 0, 0 100%, 56% 93%);
 }
+body {
+  font-family: "Poppins", sans-serif;
+}

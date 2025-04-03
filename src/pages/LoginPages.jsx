@@ -33,7 +33,7 @@ const LoginPages = () => {
         className="absolute  w-[1100px] h-[400px] -rotate-[7deg] top-40"
         alt=""
       />
-      <div className="w-[750px] h-[500px] z-50 bg-[#E6EEF8] py-16 pl-[70px] pr-20 shadow-[-16px_-16px_40px_rgba(253,255,255,0.8),16px_16px_40px_rgba(187,195,206,0.6)]">
+      <div className="w-[750px] h-[600px] z-50 bg-[#E6EEF8] py-16 pl-[70px] pr-20 shadow-[-16px_-16px_40px_rgba(253,255,255,0.8),16px_16px_40px_rgba(187,195,206,0.6)]">
         <div className="min-w-full min-h-full flex flex-col gap-14">
           <header className="flex w-full justify-center items-center gap-3">
             <img src="/img/mainLogo.png" className="w-4 h-7" alt="" />
@@ -41,11 +41,7 @@ const LoginPages = () => {
               BlueBird HR
             </h1>
           </header>
-          <div
-            id="form"
-            ref={refForm}
-            className="flex gap-9 border border-black flex-1"
-          >
+          <div id="form" ref={refForm} className="flex gap-9  flex-1">
             <img
               style={{ height: `${height / 2}px` }}
               src="/img/logoLog.png"
@@ -58,18 +54,45 @@ const LoginPages = () => {
               className="w-[2px] bg-[#D3E2F4] self-center "
             ></div>
             <div id="" className="flex flex-col">
-              <nav className="flex pr-20 items-center gap-4 border border-black">
-                <a href="" className="font-semibold text-3xl text-[#4B93E7]">
+              <nav className="flex pr-20 items-center gap-4 mb-9">
+                <a
+                  href=""
+                  className="relative after:content-[''] after:block after:w-[40px] after:bg-[#F7AC25] after:rounded after:h-1 after:-bottom-2 after:absolute  after:left-[1px] font-semibold text-3xl text-[#4B93E7]"
+                >
                   Login
                 </a>
                 <span className="h-[80%] w-[2px] bg-[#D3E2F4]"></span>
-                <a
+                {/* <a
                   href=""
-                  className="text-lg pl-1 opacity-[50%] text-[#4B93E7]"
+                  className="text-lg pl-1 border-b border-black opacity-[50%] text-[#4B93E7]"
                 >
+                  Sign Up
+                </a> */}
+                <a href="" className="text-lg opacity-[50%] text-[#4B93E7]">
                   Sign Up
                 </a>
               </nav>
+              <form action="" className="flex flex-col">
+                <input
+                  type="text"
+                  placeholder="username"
+                  name=""
+                  id=""
+                  className="bg-[#DDEAFB] py-3 px-4 w-full rounded-lg border border-[#4B93E7] outline-none"
+                />
+                <div className="flex flex-col">
+                  <input
+                    type="password"
+                    placeholder="password"
+                    name=""
+                    id=""
+                    className="bg-[#DDEAFB] py-3 px-4 w-full rounded-lg border border-[#4B93E7] outline-none"
+                  />
+                  <div className="flex">
+                    <input type="radio" />
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>

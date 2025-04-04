@@ -7,3 +7,31 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+}
+
+.custom-checkbox span {
+  width: 24px;
+  height: 24px;
+  /* display: inline-block; */
+  border: 2px solid #3388ff;
+  border-radius: 6px;
+  position: relative;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Efek saat dicentang */
+.custom-checkbox input:checked + span::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  background-color: #3388ff;
+}

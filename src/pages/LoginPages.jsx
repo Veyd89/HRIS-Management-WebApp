@@ -53,7 +53,7 @@ const LoginPages = () => {
               style={{ height: `${(height * 3) / 4}px` }}
               className="w-[2px] bg-[#D3E2F4] self-center "
             ></div>
-            <div id="" className="flex flex-col">
+            <div id="" className="flex flex-col w-full">
               <nav className="flex pr-20 items-center gap-4 mb-9">
                 <a
                   href=""
@@ -72,7 +72,7 @@ const LoginPages = () => {
                   Sign Up
                 </a>
               </nav>
-              <form action="" className="flex flex-col">
+              <form action="" className="flex flex-col gap-7">
                 <input
                   type="text"
                   placeholder="username"
@@ -88,8 +88,20 @@ const LoginPages = () => {
                     id=""
                     className="bg-[#DDEAFB] py-3 px-4 w-full rounded-lg border border-[#4B93E7] outline-none"
                   />
-                  <div className="flex">
-                    <input type="radio" />
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <label className="custom-checkbox flex items-center cursor-pointer">
+                        <input type="checkbox" id="remember" />
+                        <span></span>
+                      </label>
+                      <label
+                        htmlFor="remember"
+                        className="text-base cursor-pointer"
+                      >
+                        Remember
+                      </label>
+                    </div>
+                    <a href="">Forgot Password?</a>
                   </div>
                 </div>
               </form>

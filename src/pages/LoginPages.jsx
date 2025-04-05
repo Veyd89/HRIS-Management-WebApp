@@ -23,17 +23,20 @@ const LoginPages = () => {
     console.log(height);
   }, [height]);
   return (
-    <section className="bg-gradient-to-tr from-[#DCE5F2] to-[#F1F4F9] relative h-screen w-full flex flex-col justify-center items-center overflow-y-auto ">
-      <img
-        src="/img/X.png"
-        className="absolute  w-[1000px] h-[400px] rotate-[52.34deg] top-[17rem] "
-        alt=""
-      />
-      <img
-        src="/img/Y.png"
-        className="absolute  w-[1100px] h-[400px] -rotate-[7deg] top-40"
-        alt=""
-      />
+    <section className="h-screen box-border bg-gradient-to-tr from-[#DCE5F2] to-[#F1F4F9] relative w-full flex flex-col gap-12 justify-center items-center md:overflow-hidden">
+      <div className="flex flex-col absolute  w-full justify-center items-center h-full">
+        <img
+          src="/img/X.png"
+          className="absolute  w-[1000px] h-[400px] rotate-[52.34deg]"
+          alt=""
+        />
+        <img
+          src="/img/Y.png"
+          className="absolute  w-[1100px] h-[400px] -rotate-[7deg] "
+          alt=""
+        />
+      </div>
+
       <div className=" w-[750px] h-[600px] z-50 bg-[#E6EEF8] py-16 pl-[70px] pr-20 shadow-[-16px_-16px_40px_rgba(253,255,255,0.8),16px_16px_40px_rgba(187,195,206,0.6)] ">
         <div className="min-w-full min-h-full flex flex-col gap-14">
           <header className="flex w-full justify-center items-center gap-3">
@@ -121,7 +124,7 @@ const LoginPages = () => {
           </div>
         </div>
       </div>
-      <footer className="absolute flex flex-col gap-1.5 justify-center items-center text-xs bottom-11 text-[#4B93E7]">
+      <footer className=" flex flex-col gap-1.5 justify-center items-center text-xs  text-[#4B93E7]">
         <p className="font-semibold">Release Notes</p>
         <p>version 20.22.11</p>
         <p>Copyright © 2023-24 BlueBird HR and services</p>

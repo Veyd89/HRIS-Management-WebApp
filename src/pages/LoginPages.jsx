@@ -1,4 +1,5 @@
 // import { faGoogle } from "@fortawesome/free-brands-svg-icons";
+import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useRef, useState } from "react";
 // import Screenshot from "../Screenshot.png";
@@ -22,7 +23,7 @@ const LoginPages = () => {
     console.log(height);
   }, [height]);
   return (
-    <section className="bg-gradient-to-tr from-[#DCE5F2] to-[#F1F4F9] relative h-screen w-full flex justify-center items-center overflow-hidden ">
+    <section className="bg-gradient-to-tr from-[#DCE5F2] to-[#F1F4F9] relative h-screen w-full flex flex-col justify-center items-center overflow-y-auto ">
       <img
         src="/img/X.png"
         className="absolute  w-[1000px] h-[400px] rotate-[52.34deg] top-[17rem] "
@@ -33,7 +34,7 @@ const LoginPages = () => {
         className="absolute  w-[1100px] h-[400px] -rotate-[7deg] top-40"
         alt=""
       />
-      <div className="w-[750px] h-[600px] z-50 bg-[#E6EEF8] py-16 pl-[70px] pr-20 shadow-[-16px_-16px_40px_rgba(253,255,255,0.8),16px_16px_40px_rgba(187,195,206,0.6)]">
+      <div className=" w-[750px] h-[600px] z-50 bg-[#E6EEF8] py-16 pl-[70px] pr-20 shadow-[-16px_-16px_40px_rgba(253,255,255,0.8),16px_16px_40px_rgba(187,195,206,0.6)] ">
         <div className="min-w-full min-h-full flex flex-col gap-14">
           <header className="flex w-full justify-center items-center gap-3">
             <img src="/img/mainLogo.png" className="w-4 h-7" alt="" />
@@ -91,7 +92,7 @@ const LoginPages = () => {
                     />
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
-                        <label className="custom-checkbox flex items-center cursor-pointer">
+                        <label className="custom-checkbox flex items-center justify-center relative cursor-pointer">
                           <input type="checkbox" id="remember" />
                           <span></span>
                         </label>
@@ -106,15 +107,25 @@ const LoginPages = () => {
                     </div>
                   </div>
                 </div>
-                <div className="button">
-                  <button className="w-full "></button>
-                  <button className="w-full "></button>
+                <div className="button flex flex-col gap-4 text-[#F3F8FF]">
+                  <button className="w-full py-3 rounded-lg shadow-[inset_0px_4px_8px_rgba(0,0,0,0.16)] bg-[#F7AC25]">
+                    Login
+                  </button>
+                  <button className="w-full py-3 rounded-lg shadow-[inset_0px_4px_8px_rgba(0,0,0,0.16)] bg-[#4B93E7] flex gap-3 items-center justify-center">
+                    Login with Google{" "}
+                    <FontAwesomeIcon className="text-xl" icon={faGoogle} />
+                  </button>
                 </div>
               </form>
             </div>
           </div>
         </div>
       </div>
+      <footer className="absolute flex flex-col gap-1.5 justify-center items-center text-xs bottom-11 text-[#4B93E7]">
+        <p className="font-semibold">Release Notes</p>
+        <p>version 20.22.11</p>
+        <p>Copyright © 2023-24 BlueBird HR and services</p>
+      </footer>
     </section>
   );
 };

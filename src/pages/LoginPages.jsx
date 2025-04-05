@@ -1,5 +1,7 @@
+/* eslint-disable no-unused-vars */
 // import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
+import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useRef, useState } from "react";
 // import Screenshot from "../Screenshot.png";
@@ -8,6 +10,7 @@ const LoginPages = () => {
   const refForm = useRef(null);
   const [height, setHeight] = useState(0);
 
+  const [visiblePass, setVisiblePass] = useState(false);
   useEffect(() => {
     const observer = new ResizeObserver(([entry]) => {
       setHeight(entry.contentRect.height);
@@ -23,7 +26,7 @@ const LoginPages = () => {
     console.log(height);
   }, [height]);
   return (
-    <section className="h-screen box-border bg-gradient-to-tr from-[#DCE5F2] to-[#F1F4F9] relative w-full flex flex-col gap-12 justify-center items-center md:overflow-hidden">
+    <section className="h-screen box-border bg-gradient-to-tr from-[#DCE5F2] to-[#F1F4F9] relative w-full flex flex-col gap-12 justify-center items-center overflow-auto">
       <div className="flex flex-col absolute  w-full justify-center items-center h-full">
         <img
           src="/img/X.png"
@@ -78,21 +81,43 @@ const LoginPages = () => {
               </nav>
               <form action="" className="flex flex-col gap-9">
                 <div className="flex flex-col gap-6">
-                  <input
-                    type="text"
-                    placeholder="username"
-                    name=""
-                    id=""
-                    className="bg-[#DDEAFB] py-3 px-4 w-full rounded-lg border border-[#4B93E7] outline-none"
-                  />
-                  <div className="flex flex-col gap-2">
+                  <div className="input-box relative flex flex-col text-[#082777]">
                     <input
-                      type="password"
-                      placeholder="password"
+                      type="text"
                       name=""
-                      id=""
-                      className="bg-[#DDEAFB] py-3 px-4 w-full rounded-lg border border-[#4B93E7] outline-none"
-                    />
+                      id="username"
+                      required
+                      className="bg-[#DDEAFB] py-3 px-4 w-full rounded-lg border border-[#4B93E7] outline-none peer"
+                    />{" "}
+                    <label
+                      className="absolute flex justify-center items-center cursor-text top-[50%] -translate-y-[50%] left-4 transition-all duration-300 peer-valid:top-0 peer-valid:text-xs peer-focus:top-0   peer-focus:text-xs before:content-[''] before:bg-[#E6EEF8] before:h-1 before:min-w-full before:absolute before:px-9 before:-z-40 "
+                      htmlFor="username"
+                    >
+                      Username
+                    </label>
+                  </div>
+
+                  <div className="flex flex-col gap-2">
+                    <div className="input-box relative flex flex-col text-[#082777]">
+                      <input
+                        type={visiblePass ? "text" : "password"}
+                        name=""
+                        id="password"
+                        required
+                        className="bg-[#DDEAFB] py-3 px-4 w-full rounded-lg border border-[#4B93E7] outline-none peer transition-all duration-300 ease-in-out"
+                      />{" "}
+                      <label
+                        className="absolute flex justify-center items-center cursor-text top-[50%] -translate-y-[50%] left-4 transition-all duration-300 peer-valid:top-0 peer-valid:text-xs peer-focus:top-0   peer-focus:text-xs before:content-[''] before:bg-[#E6EEF8] before:h-1 before:min-w-full before:absolute before:px-9 before:-z-40"
+                        htmlFor="password"
+                      >
+                        Password
+                      </label>
+                      <FontAwesomeIcon
+                        className="absolute translate-y-[-50%] top-[50%] right-3 cursor-pointer w-6 h-6 text-[#91BDF5]"
+                        icon={visiblePass ? faEye : faEyeSlash}
+                        onClick={() => setVisiblePass(!visiblePass)}
+                      />
+                    </div>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
                         <label className="custom-checkbox flex items-center justify-center relative cursor-pointer">

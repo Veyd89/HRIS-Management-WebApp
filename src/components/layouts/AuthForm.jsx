@@ -3,7 +3,7 @@ import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 import React, { useEffect, useRef, useState } from "react";
 import NavAuth from "./../elements/NavAuth";
 
-const AuthForm = ({ type }) => {
+const AuthForm = ({ typePage }) => {
   const refForm = useRef(null);
   const [height, setHeight] = useState(0);
 
@@ -38,7 +38,7 @@ const AuthForm = ({ type }) => {
           className="w-[2px] bg-[#D3E2F4] self-center "
         ></div>
         <div id="" className="flex flex-col w-full">
-          <NavAuth authType={type} />
+          <NavAuth authType={typePage} />
           <form action="" className="flex flex-col gap-9">
             <div className="flex flex-col gap-6">
               <div className="input-box relative flex flex-col text-[#082777]">

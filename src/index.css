@@ -30,6 +30,9 @@ body {
 /* Efek saat dicentang */
 .custom-checkbox input:checked + span::before {
   position: absolute;
+  top: 50%; /* Tambahkan ini */
+  left: 50%;
+  transform: translate(-50%, -50%);
   content: "";
   width: 12px;
   height: 12px;

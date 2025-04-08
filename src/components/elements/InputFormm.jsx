@@ -7,7 +7,7 @@ const InputFormm = ({ typeInput, name = "", id, children }) => {
   const passwordType = visiblePass ? "text" : "password";
   return (
     <div className="input-box relative flex flex-col text-[#082777]">
-      <input
+      <input  
         type={id.toLowerCase().includes("password") ? passwordType : typeInput}
         name={name}
         id={id}

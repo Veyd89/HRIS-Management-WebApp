@@ -7,8 +7,12 @@ const InputFormm = ({ typeInput, name = "", id, children }) => {
   const passwordType = visiblePass ? "text" : "password";
   return (
     <div className="input-box relative flex flex-col text-[#082777]">
-      <input  
-        type={id.toLowerCase().includes("password") ? passwordType : typeInput}
+      <input
+        type={
+          typeInput.toLowerCase().includes("password")
+            ? passwordType
+            : typeInput
+        }
         name={name}
         id={id}
         required
@@ -23,7 +27,7 @@ const InputFormm = ({ typeInput, name = "", id, children }) => {
       <FontAwesomeIcon
         icon={visiblePass ? faEye : faEyeSlash}
         className={`absolute translate-y-[-50%] top-[50%] right-3 cursor-pointer w-6 h-6 text-[#91BDF5] ${
-          id.toLowerCase().includes("password") ? "block" : "hidden"
+          typeInput.toLowerCase().includes("password") ? "block" : "hidden"
         }`}
         onClick={() => setVisiblePass(!visiblePass)}
       />

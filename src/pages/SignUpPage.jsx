@@ -1,7 +1,8 @@
 import React from "react";
+import AuthLayouts from "../components/layouts/AuthLayouts";
 
 const SignUpPage = () => {
-  return <div>SignUpPage</div>;
+  return <AuthLayouts type={"sign up"} />;
 };
 
 export default SignUpPage;

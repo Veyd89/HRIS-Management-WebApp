@@ -1,16 +1,14 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import LoginPages from "./pages/LoginPages";
-import SignUpPage from "./pages/SignUpPage";
+import AuthPage from "./pages/AuthPage";
 
 const App = () => {
   return (
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<LoginPages />} />
-        <Route path="/signup" element={<SignUpPage />} />
+        <Route path="/auth/:type" element={<AuthPage />} />
       </Routes>
     </div>
   );

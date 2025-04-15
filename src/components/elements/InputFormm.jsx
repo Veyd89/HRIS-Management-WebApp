@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 
-const InputFormm = ({ typeInput, name = "", id, children }) => {
+const InputFormm = ({ typeInput, name = "", id, children, action = "" }) => {
   const [visiblePass, setVisiblePass] = useState(false);
   const passwordType = visiblePass ? "text" : "password";
   return (
@@ -15,6 +15,7 @@ const InputFormm = ({ typeInput, name = "", id, children }) => {
         }
         name={name}
         id={id}
+        {...action}
         required
         className="bg-[#DDEAFB] py-3 px-4 w-full rounded-lg border border-[#4B93E7] outline-none peer"
       />

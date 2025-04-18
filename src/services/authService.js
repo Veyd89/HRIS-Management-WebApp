@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import axios from "axios";
 
 const BASE_URL = "http://localhost:3000/users";
@@ -14,6 +15,12 @@ const signUP = async (newUser) => {
     return { success: false, message: `Error occured : ${error.message}` };
   }
 };
-const signIn = async () => {};
+const signIn = async (email, password) => {
+  try {
+    const res = await axios.get(`${BASE_URL}?email=${email}&`);
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 export { signUP, signIn };

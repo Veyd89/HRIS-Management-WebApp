@@ -1,21 +1,39 @@
+/* eslint-disable no-unused-vars */
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
+const BASE_URL = "http://localhost:3000/users";
+// AsyncThunk	= Payload yang berasal dari return statement dalam fungsi async
 export const loginUser = createAsyncThunk(
   "auth/login",
-  async ({ username, password }, { rejectWithValue, getState }) => {
+  async ({ email, password }, { rejectWithValue, getState }) => {
     try {
       const res = await axios.get(
-        `http://localhost:3000/users?username=${username}&password=${password}`
+        `${BASE_URL}?email=${email}&password=${password}`
       );
       if (res.data.length > 0) {
         console.log(getState());
         return res.data[0];
       } else {
-        return rejectWithValue("Invalid username or password");
+        return rejectWithValue("Invalid email or password");
       }
     } catch (error) {
       return rejectWithValue("Login failed : " + error.message);
+    }
+  }
+);
+export const registUser = createAsyncThunk(
+  "auth/register",
+  async (newUser, { rejectWithValue }) => {
+    try {
+      const res = await axios.get(`${BASE_URL}?email=${newUser.email}`);
+      if (res.data.length > 0) {
+        return rejectWithValue("Email is already registered");
+      }
+      const response = await axios.post(BASE_URL, newUser);
+      return response.data;
+    } catch (error) {
+      return rejectWithValue("Sign up failed: " + error.message);
     }
   }
 );
@@ -23,9 +41,11 @@ export const loginUser = createAsyncThunk(
 const authSlice = createSlice({
   name: "auth",
   initialState: {
+    apiURL: BASE_URL,
     user: null,
     isAuthenticated: false,
     status: "idle",
+    message: "",
     error: null,
   },
   reducers: {
@@ -50,6 +70,18 @@ const authSlice = createSlice({
       .addCase(loginUser.rejected, (state, action) => {
         state.status = "failed";
         state.error = action.payload;
+      });
+    builder
+      .addCase(registUser.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(registUser.fulfilled, (state) => {
+        state.status = "succeeded";
+      })
+      .addCase(registUser.rejected, (state, action) => {
+        state.status = "failed";
+        state.error = action.payload;
+        //akan berisi salah satu dari rejectWithValue tergantung kondisinya
       });
   },
 });

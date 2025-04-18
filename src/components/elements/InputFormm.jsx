@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 
-const InputFormm = ({ typeInput, name = "", id, children, action = "" }) => {
+const InputFormm = ({ typeInput, name = "", id, children, action = {} }) => {
   const [visiblePass, setVisiblePass] = useState(false);
   const passwordType = visiblePass ? "text" : "password";
   return (

@@ -5,13 +5,23 @@ import AuthPage from "./pages/AuthPage";
 import { useSelector } from "react-redux";
 
 const App = () => {
+  const isAuth = useSelector((state) => state.auth.isAuthenticated);
   const ProtectedRoute = () => {
-    const isAuth = useSelector((state) => state.auth.isAuthenticated);
     return isAuth ? <Outlet /> : <Navigate to={"/auth/login"} replace />;
   };
   return (
     <div>
       <Routes>
+        <Route
+          path="/auth"
+          element={
+            isAuth ? (
+              <Navigate to={"/"} replace />
+            ) : (
+              <Navigate to={"/auth/login"} replace />
+            )
+          }
+        />
         <Route path="/auth/:type" element={<AuthPage />} />
         <Route element={<ProtectedRoute />}>
           <Route path="/" element={<Home />} />

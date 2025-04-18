@@ -5,7 +5,7 @@ import InputFormm from "./../elements/InputFormm";
 import Button from "../elements/Button/Button";
 import ButtonSign from "../elements/Button/ButtonSignIn";
 import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { loginUser } from "../../redux/slice/authSlice";
 
 const FormLogin = () => {
@@ -13,7 +13,7 @@ const FormLogin = () => {
 
   const dispatch = useDispatch();
   const { status, error } = useSelector((state) => state.auth);
-  const [form, setForm] = useState({ username: "", password: "" });
+  const [form, setForm] = useState({ email: "", password: "" });
   // jadi sama saja if (e.target.name === "username") maka property username yang akan diinput
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -22,6 +22,9 @@ const FormLogin = () => {
     e.preventDefault();
     dispatch(loginUser(form));
   };
+  useEffect(() => {
+    console.log(form);
+  }, [form]);
   const ForgotPassword = () => {
     return (
       <div className="flex items-center justify-between">
@@ -42,12 +45,12 @@ const FormLogin = () => {
     <form onSubmit={handleSubmit} className="flex flex-col gap-9">
       <div className="flex flex-col gap-6">
         <InputFormm
-          id={"username"}
-          typeInput={"text"}
-          name="username"
-          action={{ onsubmit: handleChange }}
+          id={"email"}
+          typeInput={"email"}
+          name="email"
+          action={{ onChange: handleChange }}
         >
-          Username
+          Email
         </InputFormm>
 
         <div className="flex flex-col gap-2">
@@ -55,7 +58,7 @@ const FormLogin = () => {
             id={"password"}
             typeInput={"password"}
             name="password"
-            action={{ onsubmit: handleChange }}
+            action={{ onChange: handleChange }}
           >
             Password
           </InputFormm>

@@ -10,7 +10,10 @@ import { loginUser } from "../../redux/slice/authSlice";
 
 const FormLogin = () => {
   // const [visiblePass, setVisiblePass] = useState(false);
-
+  const [checkRemember, setCheckRemember] = useState(false);
+  useEffect(() => {
+    console.log(checkRemember);
+  }, [checkRemember]);
   const dispatch = useDispatch();
   const { status, error } = useSelector((state) => state.auth);
   const [form, setForm] = useState({ email: "", password: "" });
@@ -30,11 +33,15 @@ const FormLogin = () => {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <label className="custom-checkbox flex items-center justify-center relative cursor-pointer">
-            <input type="checkbox" id="remember" />
+            <input
+              type="checkbox"
+              id="remember"
+              onChange={(e) => setCheckRemember(e.target.checked)}
+            />
             <span></span>
           </label>
           <label htmlFor="remember" className="text-base cursor-pointer">
-            Remember
+            Remember me
           </label>
         </div>
         <a href="">Forgot Password?</a>

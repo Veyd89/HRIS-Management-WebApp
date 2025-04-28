@@ -12,7 +12,6 @@ export const loginUser = createAsyncThunk(
         `${BASE_URL}?email=${email}&password=${password}`
       );
       if (res.data.length > 0) {
-        console.log(getState());
         return res.data[0];
       } else {
         return rejectWithValue("Invalid email or password");
@@ -81,7 +80,7 @@ const authSlice = createSlice({
       .addCase(registUser.rejected, (state, action) => {
         state.status = "failed";
         state.error = action.payload;
-        //akan berisi salah satu dari rejectWithValue tergantung kondisinya
+        //state.error akan berisi salah satu dari rejectWithValue tergantung kondisinya apakah itu addcase login atau signup
       });
   },
 });

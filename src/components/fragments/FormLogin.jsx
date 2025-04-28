@@ -7,6 +7,7 @@ import ButtonSign from "../elements/Button/ButtonSignIn";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { loginUser } from "../../redux/slice/authSlice";
+import { setCookie } from "../../utils/cookie";
 
 const FormLogin = () => {
   // const [visiblePass, setVisiblePass] = useState(false);
@@ -14,6 +15,7 @@ const FormLogin = () => {
   const dispatch = useDispatch();
   const { status, error } = useSelector((state) => state.auth);
   const [form, setForm] = useState({ email: "", password: "" });
+
   // jadi sama saja if (e.target.name === "username") maka property username yang akan diinput
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -21,10 +23,19 @@ const FormLogin = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(loginUser(form));
+    // if (status === "succeeded") {
+    //   setCookie("rememberMe", form, 24);
+    // }
+    status === "succeeded" && setCookie("rememberMe", form, 24);
   };
   useEffect(() => {
     console.log(form);
   }, [form]);
+  // useEffect(() => {
+  //   status === "loading" && console.log("Loading....");
+  //   status === "failed" && console.log("Error", error);
+  //   status === "succeeded" && console.log("success");
+  // }, [status, error]);
   const ForgotPassword = () => {
     return (
       <div className="flex items-center justify-between">

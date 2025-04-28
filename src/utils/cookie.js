@@ -7,11 +7,12 @@ const setCookie = (userVal) => {
 };
 
 const getCookie = () => {
-  const cookies = document.cookie.split(";").reduce((acc, cookie) => {
-    const [key, val] = cookie.split("=");
-    acc[key] = encodeURIComponent(val);
-    return acc;
-  }, {});
+  // const cookies = document.cookie.split(";").reduce((acc, cookie) => {
+  //   const [key, val] = cookie.split("=");
+  //   acc[key] = encodeURIComponent(val);
+  //   return acc;
+  // }, {}); tanda {} adalah startValue/initialValue
+  const cookies = document.cookie.split(";")[3].split;
   try {
     return JSON.parse(cookies.user);
   } catch (error) {

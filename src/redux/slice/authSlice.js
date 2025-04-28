@@ -1,22 +1,25 @@
 /* eslint-disable no-unused-vars */
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import { useEffect } from "react";
 
 const BASE_URL = "http://localhost:3000/users";
 // AsyncThunk	= Payload yang berasal dari return statement dalam fungsi async
 export const loginUser = createAsyncThunk(
   "auth/login",
   async ({ email, password }, { rejectWithValue, getState }) => {
+    console.log(getState());
     try {
-      const res = await axios.get(
-        `${BASE_URL}?email=${email}&password=${password}`
-      );
-      if (res.data.length > 0) {
-        console.log(getState());
-        return res.data[0];
-      } else {
-        return rejectWithValue("Invalid email or password");
-      }
+      // useEffect(() => {
+      //   console.log(getState());
+      // }, [getState]);
+      const res = await axios.post(BASE_URL, { email, password });
+      console.log(res.data);
+      // if (res.data.length > 0) {
+      //   return res.data[0];
+      // } else {
+      //   return rejectWithValue("Invalid email or password");
+      // }
     } catch (error) {
       return rejectWithValue("Login failed : " + error.message);
     }

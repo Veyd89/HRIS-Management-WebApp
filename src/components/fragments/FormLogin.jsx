@@ -7,7 +7,7 @@ import ButtonSign from "../elements/Button/ButtonSignIn";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { loginUser } from "../../redux/slice/authSlice";
-import { setCookie } from "../../utils/cookie";
+// import { setCookie } from "../../utils/cookie";
 
 const FormLogin = () => {
   // const [visiblePass, setVisiblePass] = useState(false);
@@ -25,9 +25,9 @@ const FormLogin = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(loginUser(form));
-    if (checkRemember) {
-      setCookie(form);
-    }
+    // if (checkRemember) {
+    //   setCookie(form);
+    // }
   };
   // useEffect(() => {
   //   console.log(form);

@@ -1,4 +1,5 @@
 import React from "react";
+import Sidebar from "./../components/elements/Sidebar";
 
 const Home = () => {
   // const [user, setUser] = useState();
@@ -14,7 +15,11 @@ const Home = () => {
   //   console.log(user);
   // }, [user]);
 
-  return <div className="text-3xl">Home</div>;
+  return (
+    <div className="text-3xl">
+      <Sidebar />
+    </div>
+  );
 };
 
 export default Home;

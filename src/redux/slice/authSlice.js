@@ -13,13 +13,15 @@ export const loginUser = createAsyncThunk(
       // useEffect(() => {
       //   console.log(getState());
       // }, [getState]);
-      const res = await axios.post(BASE_URL, { email, password });
+      const res = await axios.get(
+        `${BASE_URL}?email=${email}&password=${password}`
+      );
       console.log(res.data);
-      // if (res.data.length > 0) {
-      //   return res.data[0];
-      // } else {
-      //   return rejectWithValue("Invalid email or password");
-      // }
+      if (res.data.length > 0) {
+        return res.data[0];
+      } else {
+        return rejectWithValue("Invalid email or password");
+      }
     } catch (error) {
       return rejectWithValue("Login failed : " + error.message);
     }

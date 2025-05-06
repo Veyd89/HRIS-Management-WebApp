@@ -11,6 +11,7 @@ import { loginUser } from "../../redux/slice/authSlice";
 
 const FormLogin = () => {
   // const [visiblePass, setVisiblePass] = useState(false);
+  const errorVal = useSelector((state) => state.auth.error);
   const [checkRemember, setCheckRemember] = useState(false);
   useEffect(() => {
     console.log(checkRemember);
@@ -55,6 +56,7 @@ const FormLogin = () => {
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-9">
       <div className="flex flex-col gap-6">
+        {errorVal && <p className="text-red-600 italic">{errorVal}</p>}
         <InputFormm
           id={"email"}
           typeInput={"email"}

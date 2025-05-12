@@ -12,7 +12,7 @@ const App = () => {
   };
   // console.log(getCookie());
   return (
-    <div>
+    <div className="bg-[#E5EDF9]">
       <Routes>
         <Route
           path="/auth"

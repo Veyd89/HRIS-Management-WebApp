@@ -37,3 +37,4 @@ const InputFormm = ({ typeInput, name = "", id, children, action = {} }) => {
 };
 
 export default InputFormm;
+// aaaa

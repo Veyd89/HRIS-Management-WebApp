@@ -9,17 +9,17 @@ const HeaderHome = () => {
           <input
             placeholder="Search"
             type="text"
-            className="w-full text-lg rounded-lg py-2 pl-12 pr-2 outline-none border border-[#082777] border-opacity-[24%] bg-[#E5EDF9] bg-opacity-40"
+            className="w-full text-base rounded-lg py-2 pl-12 pr-2 outline-none border border-[#082777] border-opacity-[24%] bg-[#E5EDF9] bg-opacity-40"
           />
-          <IoIosSearch className="absolute top-[25%] text-2xl left-4" />
+          <IoIosSearch className="absolute top-[20%] text-2xl left-4" />
         </div>
         <div className="flex items-center gap-4 font-semibold">
           <img
             src="/img/naruto.jpg"
             alt=""
-            className="w-11 h-11 object-cover rounded-full border-2 border-[#000000] "
+            className="w-11 h-11 object-cover rounded-full border-2 border-[#000000] cursor-pointer"
           />
-          <span className="flex items-center gap-2">
+          <span className="flex items-center gap-2 cursor-pointer">
             Naruto{" "}
             <IoIosArrowDown className="text-lg text-[#071C50] opacity-50" />
           </span>

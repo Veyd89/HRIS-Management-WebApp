@@ -3,7 +3,7 @@ import { IoIosArrowDown, IoIosSearch } from "react-icons/io";
 
 const HeaderHome = () => {
   return (
-    <header className=" top-0 h-20 sticky bg-white pl-40 pr-9 flex items-center">
+    <header className=" top-0 h-20 sticky bg-white pl-40 pr-9 flex items-center z-50">
       <div className="flex justify-between items-center w-full">
         <div className="relative flex justify-between opacity-40 w-[400px]">
           <input

@@ -1,11 +1,11 @@
 import React from "react";
 import Sidebar from "./../components/elements/Sidebar";
 import HeaderHome from "../components/elements/HeaderHome";
-import MainHome from "./../components/elements/MainHome";
+import MainHome from "./../components/fragments/MainHome";
 
 const Home = () => {
   return (
-    <section className="min-h-[10000px] ">
+    <section className="pb-6 ">
       <HeaderHome />
       <Sidebar />
       <div className="pt-12 pl-40 pr-4">

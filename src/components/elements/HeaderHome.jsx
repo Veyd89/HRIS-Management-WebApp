@@ -15,12 +15,12 @@ const HeaderHome = () => {
         </div>
         <div className="flex items-center gap-4 font-semibold">
           <img
-            src="/img/naruto.jpg"
+            src="/img/Profile.jpg"
             alt=""
-            className="w-11 h-11 object-cover rounded-full border-2 border-[#000000] cursor-pointer"
+            className="w-11 h-11 object-cover rounded-full border-2 border-[#97A2F4] border-opacity-40 cursor-pointer"
           />
           <span className="flex items-center gap-2 cursor-pointer">
-            Naruto{" "}
+            Dayendels{" "}
             <IoIosArrowDown className="text-lg text-[#071C50] opacity-50" />
           </span>
         </div>

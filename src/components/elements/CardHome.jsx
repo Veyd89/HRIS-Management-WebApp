@@ -2,7 +2,7 @@ import React from "react";
 
 const CardHome = ({ image = "", status, children, coutNotif }) => {
   return (
-    <div className="flex-1  min-h-48 relative pt-5 pl-6 group transition-all">
+    <div className="flex-1  min-h-48 relative pt-5 pl-6 group transition-all cursor-pointer">
       <div className="bg-[#F3F8FF] rounded-lg relative w-auto h-full group-hover:bg-[#4B93E7] group-hover:bg-opacity-10 transition-all ">
         <img
           src={`/img/assetsHome/Illustrations${image}.png`}

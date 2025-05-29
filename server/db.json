@@ -1,4 +1,9 @@
 {
+  "authUser": [
+    {
+      "user": null
+    }
+  ],
   "users": [
     {
       "id": "1",

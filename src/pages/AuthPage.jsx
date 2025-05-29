@@ -12,7 +12,8 @@ const AuthPage = () => {
   if (isAuth) return <Navigate to={"/"} replace />;
   // Jika `type` tidak valid, arahkan ke login atau tampilkan 404
   if (!validTypes.includes(type)) {
-    return <Navigate to="/auth/login" />;
+    // return <Navigate to="/auth/login" />;
+    return <h1>Not Found</h1>;
     // atau: return <NotFoundPage />;
   }
 

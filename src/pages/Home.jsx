@@ -1,22 +1,15 @@
 import React from "react";
 import Sidebar from "./../components/elements/Sidebar";
 import HeaderHome from "../components/elements/HeaderHome";
+import MainHome from "./../components/fragments/MainHome";
 
 const Home = () => {
   return (
-    <section className="min-h-[10000px] ">
+    <section className="pb-6 ">
       <HeaderHome />
       <Sidebar />
-      <div className="pl-[155px] pr-[350px] ">
-        <div className="pl-7">
-          <div className="flex justify-between">
-            <h3>Overview</h3>
-            <div className="flex gap-4">
-              <button>Add</button>
-              <button>Add</button>
-            </div>
-          </div>
-        </div>
+      <div className="pt-12 pl-40 pr-4">
+        <MainHome />
       </div>
     </section>
   );

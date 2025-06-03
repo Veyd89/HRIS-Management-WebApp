@@ -65,141 +65,145 @@ const MainHome = () => {
               Onboardings
             </a>
           </nav>
-          <table class="w-full text-[#475569] text-xs sm:text-sm rounded-xl">
+          <table className="w-full text-[#475569] text-xs sm:text-sm rounded-xl">
             <thead className="">
-              <tr class=" border-[#E2E8F0] bg-[#F1F5F9]">
-                <th class="py-3  text-center pl-4  font-normal"></th>
-                <th class="py-3  text-center font-normal">Positions Left</th>
-                <th class="py-3  text-center font-normal">Applications</th>
-                <th class="py-3  text-center font-normal">Interviewed</th>
-                <th class="py-3  text-center font-normal">Rejected</th>
-                <th class="py-3 text-center font-normal">Feedback Pending</th>
-                <th class="py-3 pr-4 text-center font-normal">Offered</th>
+              <tr className=" border-[#E2E8F0] bg-[#F1F5F9]">
+                <th className="py-3  text-center pl-4  font-normal"></th>
+                <th className="py-3  text-center font-normal">
+                  Positions Left
+                </th>
+                <th className="py-3  text-center font-normal">Applications</th>
+                <th className="py-3  text-center font-normal">Interviewed</th>
+                <th className="py-3  text-center font-normal">Rejected</th>
+                <th className="py-3 text-center font-normal">
+                  Feedback Pending
+                </th>
+                <th className="py-3 pr-4 text-center font-normal">Offered</th>
               </tr>
             </thead>
             <tbody>
-              <tr class="border-b border-[#E2E8F0] bg-[#F1F5F9]">
-                <td class=" py-3 pl-4 flex items-center space-x-3">
+              <tr className="border-b border-[#E2E8F0] bg-[#F1F5F9]">
+                <td className=" py-3 pl-4 flex items-center space-x-3">
                   <div className="bg-[#B3C6ED] rounded-full w-10 h-10 flex justify-center items-center">
                     <IoBag className="text-white w-6 h-6" />
                   </div>
                   <div>
-                    <p class="font-semibold text-[#0F172A] text-sm sm:text-base leading-tight">
+                    <p className="font-semibold text-[#0F172A] text-sm sm:text-base leading-tight">
                       Senior Data Analyst
                     </p>
-                    <p class="text-[#94A3B8] text-xs leading-tight">
+                    <p className="text-[#94A3B8] text-xs leading-tight">
                       100 days ago
                     </p>
                   </div>
                 </td>
-                <td class=" py-3 font-semibold text-[#0F172A] text-center">
+                <td className=" py-3 font-semibold text-[#0F172A] text-center">
                   3
                 </td>
-                <td class=" py-3 text-center">123</td>
-                <td class=" py-3 text-center">40</td>
-                <td class=" py-3 text-center">33</td>
-                <td class=" py-3 text-center">7</td>
-                <td class=" py-3 font-semibold text-[#0F172A] text-center pr-4">
+                <td className=" py-3 text-center">123</td>
+                <td className=" py-3 text-center">40</td>
+                <td className=" py-3 text-center">33</td>
+                <td className=" py-3 text-center">7</td>
+                <td className=" py-3 font-semibold text-[#0F172A] text-center pr-4">
                   2
                 </td>
               </tr>
-              <tr class="border border-[#E2E8F0] bg-[#F1F5F9]">
-                <td class=" py-3 pl-4 flex items-center space-x-3">
+              <tr className="border border-[#E2E8F0] bg-[#F1F5F9]">
+                <td className=" py-3 pl-4 flex items-center space-x-3">
                   <div className="bg-[#B3C6ED] rounded-full w-10 h-10 flex justify-center items-center">
                     <IoBag className="text-white w-6 h-6" />
                   </div>
                   <div>
-                    <p class="font-semibold text-[#0F172A] text-sm sm:text-base leading-tight">
+                    <p className="font-semibold text-[#0F172A] text-sm sm:text-base leading-tight">
                       Junior Data Analyst
                     </p>
-                    <p class="text-[#94A3B8] text-xs leading-tight">
+                    <p className="text-[#94A3B8] text-xs leading-tight">
                       78 days ago
                     </p>
                   </div>
                 </td>
-                <td class=" py-3 font-semibold text-[#0F172A] text-center">
+                <td className=" py-3 font-semibold text-[#0F172A] text-center">
                   7
                 </td>
-                <td class=" py-3 text-center">567</td>
-                <td class=" py-3 text-center">22</td>
-                <td class=" py-3 text-center">20</td>
-                <td class=" py-3 text-center">2</td>
-                <td class=" py-3 font-semibold text-[#0F172A] text-center pr-4">
+                <td className=" py-3 text-center">567</td>
+                <td className=" py-3 text-center">22</td>
+                <td className=" py-3 text-center">20</td>
+                <td className=" py-3 text-center">2</td>
+                <td className=" py-3 font-semibold text-[#0F172A] text-center pr-4">
                   4
                 </td>
               </tr>
-              <tr class="border border-[#E2E8F0] bg-[#F1F5F9]">
-                <td class=" py-3 pl-4 flex items-center space-x-3">
+              <tr className="border border-[#E2E8F0] bg-[#F1F5F9]">
+                <td className=" py-3 pl-4 flex items-center space-x-3">
                   <div className="bg-[#B3C6ED] rounded-full w-10 h-10 flex justify-center items-center">
                     <IoBag className="text-white w-6 h-6" />
                   </div>
                   <div>
-                    <p class="font-semibold text-[#0F172A] text-sm sm:text-base leading-tight">
+                    <p className="font-semibold text-[#0F172A] text-sm sm:text-base leading-tight">
                       Product Designer
                     </p>
-                    <p class="text-[#94A3B8] text-xs leading-tight">
+                    <p className="text-[#94A3B8] text-xs leading-tight">
                       56 days ago
                     </p>
                   </div>
                 </td>
-                <td class=" py-3 font-semibold text-[#0F172A] text-center">
+                <td className=" py-3 font-semibold text-[#0F172A] text-center">
                   2
                 </td>
-                <td class=" py-3 text-center">201</td>
-                <td class=" py-3 text-center">32</td>
-                <td class=" py-3 text-center">18</td>
-                <td class=" py-3 text-center">14</td>
-                <td class=" py-3 font-semibold text-[#0F172A] text-center pr-4">
+                <td className=" py-3 text-center">201</td>
+                <td className=" py-3 text-center">32</td>
+                <td className=" py-3 text-center">18</td>
+                <td className=" py-3 text-center">14</td>
+                <td className=" py-3 font-semibold text-[#0F172A] text-center pr-4">
                   0
                 </td>
               </tr>
-              <tr class="border border-[#E2E8F0] bg-[#F1F5F9]">
-                <td class=" py-3 pl-4 flex items-center space-x-3">
+              <tr className="border border-[#E2E8F0] bg-[#F1F5F9]">
+                <td className=" py-3 pl-4 flex items-center space-x-3">
                   <div className="bg-[#B3C6ED] rounded-full w-10 h-10 flex justify-center items-center">
                     <IoBag className="text-white w-6 h-6" />
                   </div>
                   <div>
-                    <p class="font-semibold text-[#0F172A] text-sm sm:text-base leading-tight">
+                    <p className="font-semibold text-[#0F172A] text-sm sm:text-base leading-tight">
                       Java Developer
                     </p>
-                    <p class="text-[#94A3B8] text-xs leading-tight">
+                    <p className="text-[#94A3B8] text-xs leading-tight">
                       46 days ago
                     </p>
                   </div>
                 </td>
-                <td class=" py-3 font-semibold text-[#0F172A] text-center">
+                <td className=" py-3 font-semibold text-[#0F172A] text-center">
                   5
                 </td>
-                <td class=" py-3 text-center">231</td>
-                <td class=" py-3 text-center">23</td>
-                <td class=" py-3 text-center">10</td>
-                <td class=" py-3 text-center">13</td>
-                <td class=" py-3 font-semibold text-[#0F172A] text-center pr-4">
+                <td className=" py-3 text-center">231</td>
+                <td className=" py-3 text-center">23</td>
+                <td className=" py-3 text-center">10</td>
+                <td className=" py-3 text-center">13</td>
+                <td className=" py-3 font-semibold text-[#0F172A] text-center pr-4">
                   3
                 </td>
               </tr>
-              <tr class="bg-[#F1F5F9]">
-                <td class=" py-3 pl-4 flex items-center space-x-3">
+              <tr className="bg-[#F1F5F9]">
+                <td className=" py-3 pl-4 flex items-center space-x-3">
                   <div className="bg-[#B3C6ED] rounded-full w-10 h-10 flex justify-center items-center">
                     <IoBag className="text-white w-6 h-6" />
                   </div>
                   <div>
-                    <p class="font-semibold text-[#0F172A] text-sm sm:text-base leading-tight">
+                    <p className="font-semibold text-[#0F172A] text-sm sm:text-base leading-tight">
                       Product Manager
                     </p>
-                    <p class="text-[#94A3B8] text-xs leading-tight">
+                    <p className="text-[#94A3B8] text-xs leading-tight">
                       13 days ago
                     </p>
                   </div>
                 </td>
-                <td class=" py-3 font-semibold text-[#0F172A] text-center">
+                <td className=" py-3 font-semibold text-[#0F172A] text-center">
                   3
                 </td>
-                <td class=" py-3 text-center">67</td>
-                <td class=" py-3 text-center">41</td>
-                <td class=" py-3 text-center">22</td>
-                <td class=" py-3 text-center">19</td>
-                <td class=" py-3 font-semibold text-[#0F172A] text-center pr-4">
+                <td className=" py-3 text-center">67</td>
+                <td className=" py-3 text-center">41</td>
+                <td className=" py-3 text-center">22</td>
+                <td className=" py-3 text-center">19</td>
+                <td className=" py-3 font-semibold text-[#0F172A] text-center pr-4">
                   1
                 </td>
               </tr>

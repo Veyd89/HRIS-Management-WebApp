@@ -33,21 +33,31 @@ const FormLogin = () => {
   // useEffect(() => {
   //   console.log(form);
   // }, [form]);
+  useEffect(() => {
+    console.log(checkRemember);
+  });
   const ForgotPassword = () => {
     return (
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <label className="custom-checkbox flex items-center justify-center relative cursor-pointer">
+          <label className="flex items-center gap-2 cursor-pointer relative">
             <input
               type="checkbox"
-              id="remember"
+              className="absolute hidden opacity-0 w-0 h-0"
+              checked={checkRemember}
               onChange={(e) => setCheckRemember(e.target.checked)}
             />
-            <span></span>
+            <span className="w-4 h-4 border border-blue-500 rounded bg-transparent flex items-center justify-center transition-all duration-1000 relative">
+              {checkRemember && (
+                <span className="w-3 h-3 bg-blue-500 rounded absolute"></span>
+              )}
+            </span>
+            <span className="text-base">Remember me</span>
           </label>
-          <label htmlFor="remember" className="text-base cursor-pointer">
+
+          {/* <label htmlFor="remember" className="text-base cursor-pointer">
             Remember me
-          </label>
+          </label> */}
         </div>
         <a href="">Forgot Password?</a>
       </div>

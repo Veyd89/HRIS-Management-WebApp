@@ -4,6 +4,8 @@ import axios from "axios";
 import { useEffect } from "react";
 
 const BASE_URL = "http://localhost:3000/users";
+const localUser = JSON.parse(localStorage.getItem("user"));
+const sessionUser = JSON.parse(sessionStorage.getItem("user"));
 // AsyncThunk	= Payload yang berasal dari return statement dalam fungsi async
 export const loginUser = createAsyncThunk(
   "auth/login",
@@ -47,8 +49,8 @@ const authSlice = createSlice({
   name: "auth",
   initialState: {
     apiURL: BASE_URL,
-    user: null,
-    isAuthenticated: false,
+    user: localUser || sessionUser || null,
+    isAuthenticated: !!(localUser || sessionUser),
     status: "idle",
     message: "",
     error: null,
@@ -71,6 +73,7 @@ const authSlice = createSlice({
         state.user = action.payload;
         state.isAuthenticated = true;
         state.error = null;
+        sessionStorage.setItem("user", JSON.stringify(action.payload));
       })
       .addCase(loginUser.rejected, (state, action) => {
         state.status = "failed";

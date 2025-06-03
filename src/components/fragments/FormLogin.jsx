@@ -18,7 +18,11 @@ const FormLogin = () => {
   }, [checkRemember]);
   const dispatch = useDispatch();
   const { status, error } = useSelector((state) => state.auth);
-  const [form, setForm] = useState({ email: "", password: "" });
+  const [form, setForm] = useState({
+    email: "",
+    password: "",
+    rememberMe: true,
+  });
   // jadi sama saja if (e.target.name === "username") maka property username yang akan diinput
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -49,7 +53,7 @@ const FormLogin = () => {
             />
             <span className="w-4 h-4 border border-blue-500 rounded bg-transparent flex items-center justify-center transition-all duration-1000 relative">
               {checkRemember && (
-                <span className="w-3 h-3 bg-blue-500 rounded absolute"></span>
+                <span className="w-2 h-2 bg-blue-500 rounded absolute"></span>
               )}
             </span>
             <span className="text-base">Remember me</span>

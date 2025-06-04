@@ -4,21 +4,28 @@ import axios from "axios";
 import { useEffect } from "react";
 
 const BASE_URL = "http://localhost:3000/users";
+const localUser = JSON.parse(localStorage.getItem("user"));
+const sessionUser = JSON.parse(sessionStorage.getItem("user"));
 // AsyncThunk	= Payload yang berasal dari return statement dalam fungsi async
 export const loginUser = createAsyncThunk(
   "auth/login",
-  async ({ email, password }, { rejectWithValue, getState }) => {
+  // async ({ email, password }, { rejectWithValue, getState }) => {
+  async (arg, { rejectWithValue, getState }) => {
     console.log(getState());
     try {
       // useEffect(() => {
       //   console.log(getState());
       // }, [getState]);
       const res = await axios.get(
-        `${BASE_URL}?email=${email}&password=${password}`
+        `${BASE_URL}?email=${arg.email}&password=${arg.password}`
       );
       console.log(res.data);
       if (res.data.length > 0) {
-        return res.data[0];
+        return {
+          email: arg.email,
+          password: arg.password,
+          remember: arg.remember,
+        };
       } else {
         return rejectWithValue("Invalid email or password");
       }
@@ -47,8 +54,8 @@ const authSlice = createSlice({
   name: "auth",
   initialState: {
     apiURL: BASE_URL,
-    user: null,
-    isAuthenticated: false,
+    user: localUser || sessionUser || null,
+    isAuthenticated: !!(localUser || sessionUser),
     status: "idle",
     message: "",
     error: null,
@@ -71,6 +78,11 @@ const authSlice = createSlice({
         state.user = action.payload;
         state.isAuthenticated = true;
         state.error = null;
+        if (action.meta.arg.rememberMe === true) {
+          localStorage.setItem("user", JSON.stringify(action.payload));
+        } else {
+          sessionStorage.setItem("user", JSON.stringify(action.payload));
+        }
       })
       .addCase(loginUser.rejected, (state, action) => {
         state.status = "failed";

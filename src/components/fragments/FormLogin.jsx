@@ -12,13 +12,17 @@ import { loginUser } from "../../redux/slice/authSlice";
 const FormLogin = () => {
   // const [visiblePass, setVisiblePass] = useState(false);
   const errorVal = useSelector((state) => state.auth.error);
-  const [checkRemember, setCheckRemember] = useState(false);
-  useEffect(() => {
-    console.log(checkRemember);
-  }, [checkRemember]);
+  // const [checkRemember, setCheckRemember] = useState(false);
+  // useEffect(() => {
+  //   console.log(checkRemember);
+  // }, [checkRemember]);
   const dispatch = useDispatch();
   const { status, error } = useSelector((state) => state.auth);
-  const [form, setForm] = useState({ email: "", password: "" });
+  const [form, setForm] = useState({
+    email: "",
+    password: "",
+    rememberMe: false,
+  });
   // jadi sama saja if (e.target.name === "username") maka property username yang akan diinput
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -33,9 +37,9 @@ const FormLogin = () => {
   // useEffect(() => {
   //   console.log(form);
   // }, [form]);
-  useEffect(() => {
-    console.log(checkRemember);
-  });
+  // useEffect(() => {
+  //   console.log(checkRemember);
+  // });
   const ForgotPassword = () => {
     return (
       <div className="flex items-center justify-between">
@@ -44,11 +48,13 @@ const FormLogin = () => {
             <input
               type="checkbox"
               className="absolute hidden opacity-0 w-0 h-0"
-              checked={checkRemember}
-              onChange={(e) => setCheckRemember(e.target.checked)}
+              checked={form.rememberMe}
+              onChange={(e) =>
+                setForm({ ...form, rememberMe: e.target.checked })
+              }
             />
             <span className="w-4 h-4 border border-blue-500 rounded bg-transparent flex items-center justify-center transition-all duration-1000 relative">
-              {checkRemember && (
+              {form.rememberMe && (
                 <span className="w-3 h-3 bg-blue-500 rounded absolute"></span>
               )}
             </span>

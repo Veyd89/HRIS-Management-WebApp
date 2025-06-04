@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../elements/Button/Button";
 import CardHome from "./../elements/CardHome";
 import { IoBag } from "react-icons/io5";
+import Meetings from "./../elements/Meetings";
 
 const MainHome = () => {
   return (
@@ -231,229 +232,30 @@ const MainHome = () => {
               Today
             </h2>
             <div className="flex flex-col gap-1">
-              <div className="w-full h-12 rounded-lg bg-[#A0DBF4] bg-opacity-[34%] text-[#1B5CBE] flex items-center overflow-hidden">
-                <span className="border-r border-[#1B5CBE] border-opacity-[44%] px-2.5 h-full text-base flex items-center font-semibold">
-                  3:15
-                </span>
-                <div className="h-full w-full flex justify-center items-center">
-                  <div className="w-full text-sm pl-2">
-                    <p className="w-full ">
-                      <span className="font-semibold"> Mini Soman;</span> Mean
-                      stack developer; 4th phase
-                    </p>
-                    <p className="">
-                      interview{" "}
-                      <span className="font-semibold">| 3:15 - 3:45</span>
-                    </p>
-                  </div>
-                  <span className="w-[3%] bg-[#1B5CBE] opacity-50 h-full"></span>
-                </div>
-              </div>
-              <div className="w-full h-12 rounded-lg bg-[#A0DBF4] bg-opacity-[34%] text-[#1B5CBE] flex items-center overflow-hidden">
-                <span className="border-r border-[#1B5CBE] border-opacity-[44%] px-2.5 h-full text-base flex items-center font-semibold">
-                  3:15
-                </span>
-                <div className="h-full w-full flex justify-center items-center">
-                  <div className="w-full text-sm pl-2">
-                    <p className="w-full ">
-                      <span className="font-semibold"> Mini Soman;</span> Mean
-                      stack developer; 4th phase
-                    </p>
-                    <p className="">
-                      interview{" "}
-                      <span className="font-semibold">| 3:15 - 3:45</span>
-                    </p>
-                  </div>
-                  <span className="w-[3%] bg-[#1B5CBE] opacity-50 h-full"></span>
-                </div>
-              </div>
-              <div className="w-full h-12 rounded-lg bg-[#A0DBF4] bg-opacity-[34%] text-[#1B5CBE] flex items-center overflow-hidden">
-                <span className="border-r border-[#1B5CBE] border-opacity-[44%] px-2.5 h-full text-base flex items-center font-semibold">
-                  3:15
-                </span>
-                <div className="h-full w-full flex justify-center items-center">
-                  <div className="w-full text-sm pl-2">
-                    <p className="w-full ">
-                      <span className="font-semibold"> Mini Soman;</span> Mean
-                      stack developer; 4th phase
-                    </p>
-                    <p className="">
-                      interview{" "}
-                      <span className="font-semibold">| 3:15 - 3:45</span>
-                    </p>
-                  </div>
-                  <span className="w-[3%] bg-[#1B5CBE] opacity-50 h-full"></span>
-                </div>
-              </div>
-              <div className="w-full h-12 rounded-lg bg-[#A0DBF4] bg-opacity-[34%] text-[#1B5CBE] flex items-center overflow-hidden">
-                <span className="border-r border-[#1B5CBE] border-opacity-[44%] px-2.5 h-full text-base flex items-center font-semibold">
-                  3:15
-                </span>
-                <div className="h-full w-full flex justify-center items-center">
-                  <div className="w-full text-sm pl-2">
-                    <p className="w-full ">
-                      <span className="font-semibold"> Mini Soman;</span> Mean
-                      stack developer; 4th phase
-                    </p>
-                    <p className="">
-                      interview{" "}
-                      <span className="font-semibold">| 3:15 - 3:45</span>
-                    </p>
-                  </div>
-                  <span className="w-[3%] bg-[#1B5CBE] opacity-50 h-full"></span>
-                </div>
-              </div>
-              <div className="w-full h-12 rounded-lg bg-[#A0DBF4] bg-opacity-[34%] text-[#1B5CBE] flex items-center overflow-hidden">
-                <span className="border-r border-[#1B5CBE] border-opacity-[44%] px-2.5 h-full text-base flex items-center font-semibold">
-                  3:15
-                </span>
-                <div className="h-full w-full flex justify-center items-center">
-                  <div className="w-full text-sm pl-2">
-                    <p className="w-full ">
-                      <span className="font-semibold"> Mini Soman;</span> Mean
-                      stack developer; 4th phase
-                    </p>
-                    <p className="">
-                      interview{" "}
-                      <span className="font-semibold">| 3:15 - 3:45</span>
-                    </p>
-                  </div>
-                  <span className="w-[3%] bg-[#1B5CBE] opacity-50 h-full"></span>
-                </div>
-              </div>
-              <div className="w-full h-12 rounded-lg bg-[#A0DBF4] bg-opacity-[34%] text-[#1B5CBE] flex items-center overflow-hidden">
-                <span className="border-r border-[#1B5CBE] border-opacity-[44%] px-2.5 h-full text-base flex items-center font-semibold">
-                  3:15
-                </span>
-                <div className="h-full w-full flex justify-center items-center">
-                  <div className="w-full text-sm pl-2">
-                    <p className="w-full ">
-                      <span className="font-semibold"> Mini Soman;</span> Mean
-                      stack developer; 4th phase
-                    </p>
-                    <p className="">
-                      interview{" "}
-                      <span className="font-semibold">| 3:15 - 3:45</span>
-                    </p>
-                  </div>
-                  <span className="w-[3%] bg-[#1B5CBE] opacity-50 h-full"></span>
-                </div>
-              </div>
+              <Meetings />
+              <Meetings />
+              <Meetings />
+              <Meetings />
+              <Meetings />
             </div>
           </div>
         </div>
-        <div className="w-full px-2">
-          <h2 className="w-full font-semibold text-xs pl-2 pb-2 text-[#071C50] opacity-50">
-            Today
-          </h2>
-          <div className="flex flex-col gap-1">
-            <div className="w-full h-12 rounded-lg bg-[#A0DBF4] bg-opacity-[34%] text-[#1B5CBE] flex items-center overflow-hidden">
-              <span className="border-r border-[#1B5CBE] border-opacity-[44%] px-2.5 h-full text-base flex items-center font-semibold">
-                3:15
-              </span>
-              <div className="h-full w-full flex justify-center items-center">
-                <div className="w-full text-sm pl-2">
-                  <p className="w-full ">
-                    <span className="font-semibold"> Mini Soman;</span> Mean
-                    stack developer; 4th phase
-                  </p>
-                  <p className="">
-                    interview{" "}
-                    <span className="font-semibold">| 3:15 - 3:45</span>
-                  </p>
-                </div>
-                <span className="w-[3%] bg-[#1B5CBE] opacity-50 h-full"></span>
-              </div>
-            </div>
-            <div className="w-full h-12 rounded-lg bg-[#A0DBF4] bg-opacity-[34%] text-[#1B5CBE] flex items-center overflow-hidden">
-              <span className="border-r border-[#1B5CBE] border-opacity-[44%] px-2.5 h-full text-base flex items-center font-semibold">
-                3:15
-              </span>
-              <div className="h-full w-full flex justify-center items-center">
-                <div className="w-full text-sm pl-2">
-                  <p className="w-full ">
-                    <span className="font-semibold"> Mini Soman;</span> Mean
-                    stack developer; 4th phase
-                  </p>
-                  <p className="">
-                    interview{" "}
-                    <span className="font-semibold">| 3:15 - 3:45</span>
-                  </p>
-                </div>
-                <span className="w-[3%] bg-[#1B5CBE] opacity-50 h-full"></span>
-              </div>
-            </div>
-            <div className="w-full h-12 rounded-lg bg-[#A0DBF4] bg-opacity-[34%] text-[#1B5CBE] flex items-center overflow-hidden">
-              <span className="border-r border-[#1B5CBE] border-opacity-[44%] px-2.5 h-full text-base flex items-center font-semibold">
-                3:15
-              </span>
-              <div className="h-full w-full flex justify-center items-center">
-                <div className="w-full text-sm pl-2">
-                  <p className="w-full ">
-                    <span className="font-semibold"> Mini Soman;</span> Mean
-                    stack developer; 4th phase
-                  </p>
-                  <p className="">
-                    interview{" "}
-                    <span className="font-semibold">| 3:15 - 3:45</span>
-                  </p>
-                </div>
-                <span className="w-[3%] bg-[#1B5CBE] opacity-50 h-full"></span>
-              </div>
-            </div>
-            <div className="w-full h-12 rounded-lg bg-[#A0DBF4] bg-opacity-[34%] text-[#1B5CBE] flex items-center overflow-hidden">
-              <span className="border-r border-[#1B5CBE] border-opacity-[44%] px-2.5 h-full text-base flex items-center font-semibold">
-                3:15
-              </span>
-              <div className="h-full w-full flex justify-center items-center">
-                <div className="w-full text-sm pl-2">
-                  <p className="w-full ">
-                    <span className="font-semibold"> Mini Soman;</span> Mean
-                    stack developer; 4th phase
-                  </p>
-                  <p className="">
-                    interview{" "}
-                    <span className="font-semibold">| 3:15 - 3:45</span>
-                  </p>
-                </div>
-                <span className="w-[3%] bg-[#1B5CBE] opacity-50 h-full"></span>
-              </div>
-            </div>
-            <div className="w-full h-12 rounded-lg bg-[#A0DBF4] bg-opacity-[34%] text-[#1B5CBE] flex items-center overflow-hidden">
-              <span className="border-r border-[#1B5CBE] border-opacity-[44%] px-2.5 h-full text-base flex items-center font-semibold">
-                3:15
-              </span>
-              <div className="h-full w-full flex justify-center items-center">
-                <div className="w-full text-sm pl-2">
-                  <p className="w-full ">
-                    <span className="font-semibold"> Mini Soman;</span> Mean
-                    stack developer; 4th phase
-                  </p>
-                  <p className="">
-                    interview{" "}
-                    <span className="font-semibold">| 3:15 - 3:45</span>
-                  </p>
-                </div>
-                <span className="w-[3%] bg-[#1B5CBE] opacity-50 h-full"></span>
-              </div>
-            </div>
-            <div className="w-full h-12 rounded-lg bg-[#A0DBF4] bg-opacity-[34%] text-[#1B5CBE] flex items-center overflow-hidden">
-              <span className="border-r border-[#1B5CBE] border-opacity-[44%] px-2.5 h-full text-base flex items-center font-semibold">
-                3:15
-              </span>
-              <div className="h-full w-full flex justify-center items-center">
-                <div className="w-full text-sm pl-2">
-                  <p className="w-full ">
-                    <span className="font-semibold"> Mini Soman;</span> Mean
-                    stack developer; 4th phase
-                  </p>
-                  <p className="">
-                    interview{" "}
-                    <span className="font-semibold">| 3:15 - 3:45</span>
-                  </p>
-                </div>
-                <span className="w-[3%] bg-[#1B5CBE] opacity-50 h-full"></span>
-              </div>
+        <div className="flex flex-col gap-4">
+          {" "}
+          <div className="w-full px-2">
+            <h2 className="w-full font-semibold text-xs pl-2 pb-2 text-[#071C50] opacity-50">
+              Tomorrow
+            </h2>
+            <div className="flex flex-col gap-1">
+              <Meetings />
+              <Meetings />
+              <Meetings color="B0F1B6" />
+              <Meetings />
+              <Meetings />
+              <Meetings />
+              <Meetings />
+              <Meetings />
+              <Meetings />
             </div>
           </div>
         </div>

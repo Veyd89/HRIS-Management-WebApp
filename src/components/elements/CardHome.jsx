@@ -13,6 +13,10 @@ const CardHome = ({ image = "", status, children, coutNotif }) => {
           <p>{children}</p>
           <p className="status">{status}</p>
         </div>
+        <div className=" text-blue-900 hidden group-hover:flex absolute items-center justify-center right-4 bottom-2 font-thin font-mono">
+          <span className="text-4xl -mr-2">{">"}</span>
+          <span className="text-3xl">{">"}</span>
+        </div>
       </div>
       <div className=" transition-all group-hover:bg-[#4B93E7] group-hover:w-24 group-hover:h-28 group-hover:rounded-[32px] group-hover:text-white group-hover:font-semibold group-hover:text-4xl group-hover:border group-hover:border-black group-hover:border-opacity-[33%] flex absolute w-20 h-20 border-[#082777] border-opacity-50 rounded-3xl border top-0 left-0 bg-[#F3F8FF] font-semibold text-[#071C50] text-2xl justify-center items-center">
         {coutNotif}

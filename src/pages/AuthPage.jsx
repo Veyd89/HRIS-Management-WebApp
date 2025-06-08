@@ -17,7 +17,11 @@ const AuthPage = () => {
     // atau: return <NotFoundPage />;
   }
 
-  return <AuthLayouts type={type} />;
+  return (
+    <div className="">
+      <AuthLayouts type={type} />
+    </div>
+  );
 };
 
 export default AuthPage;

@@ -19,5 +19,57 @@
       "email": "admin@admin.com",
       "password": "admin123"
     }
+  ],
+  "jobs": [
+    {
+      "title": "Senior Data Analyst",
+      "postedDaysAgo": 100,
+      "positionsLeft": 3,
+      "applications": 123,
+      "interviewed": 40,
+      "rejected": 33,
+      "feedbackPending": 7,
+      "offered": 2
+    },
+    {
+      "title": "Junior Data Analyst",
+      "postedDaysAgo": 78,
+      "positionsLeft": 7,
+      "applications": 567,
+      "interviewed": 22,
+      "rejected": 20,
+      "feedbackPending": 2,
+      "offered": 4
+    },
+    {
+      "title": "Product Designer",
+      "postedDaysAgo": 56,
+      "positionsLeft": 2,
+      "applications": 201,
+      "interviewed": 32,
+      "rejected": 18,
+      "feedbackPending": 14,
+      "offered": 0
+    },
+    {
+      "title": "Java Developer",
+      "postedDaysAgo": 46,
+      "positionsLeft": 5,
+      "applications": 231,
+      "interviewed": 23,
+      "rejected": 10,
+      "feedbackPending": 13,
+      "offered": 3
+    },
+    {
+      "title": "Product Manager",
+      "postedDaysAgo": 13,
+      "positionsLeft": 3,
+      "applications": 67,
+      "interviewed": 41,
+      "rejected": 22,
+      "feedbackPending": 19,
+      "offered": 1
+    }
   ]
 }

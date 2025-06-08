@@ -6,7 +6,7 @@ import Meetings from "./../elements/Meetings";
 
 const MainHome = () => {
   return (
-    <div className="flex gap-4">
+    <div className="flex gap-4 border border-black h-full">
       <div className="flex-[3]">
         <div className="flex flex-col  gap-6 h-auto">
           <header className="pl-7 flex justify-between items-center">
@@ -20,8 +20,8 @@ const MainHome = () => {
               </button>
             </div>
           </header>
-          <div className="card-row flex flex-col gap-4">
-            <div className="card-col flex gap-4">
+          <div className="grid grid-cols-1 gap-4">
+            <div className="grid grid-cols-2 2xl:grid-cols-4 gap-4">
               <CardHome coutNotif={56} status={"Scheduled"} image="">
                 Interview
               </CardHome>
@@ -35,7 +35,7 @@ const MainHome = () => {
                 Offer Acceptance
               </CardHome>
             </div>
-            <div className="card-col flex gap-2">
+            <div className="grid grid-cols-2 2xl:grid-cols-4 gap-4">
               <CardHome coutNotif={16} status={"Pending"} image="-4">
                 Documentations
               </CardHome>
@@ -108,106 +108,6 @@ const MainHome = () => {
                   2
                 </td>
               </tr>
-              <tr className="border border-[#E2E8F0] bg-[#F1F5F9]">
-                <td className=" py-3 pl-4 flex items-center space-x-3">
-                  <div className="bg-[#B3C6ED] rounded-full w-10 h-10 flex justify-center items-center">
-                    <IoBag className="text-white w-6 h-6" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-[#0F172A] text-sm sm:text-base leading-tight">
-                      Junior Data Analyst
-                    </p>
-                    <p className="text-[#94A3B8] text-xs leading-tight">
-                      78 days ago
-                    </p>
-                  </div>
-                </td>
-                <td className=" py-3 font-semibold text-[#0F172A] text-center">
-                  7
-                </td>
-                <td className=" py-3 text-center">567</td>
-                <td className=" py-3 text-center">22</td>
-                <td className=" py-3 text-center">20</td>
-                <td className=" py-3 text-center">2</td>
-                <td className=" py-3 font-semibold text-[#0F172A] text-center pr-4">
-                  4
-                </td>
-              </tr>
-              <tr className="border border-[#E2E8F0] bg-[#F1F5F9]">
-                <td className=" py-3 pl-4 flex items-center space-x-3">
-                  <div className="bg-[#B3C6ED] rounded-full w-10 h-10 flex justify-center items-center">
-                    <IoBag className="text-white w-6 h-6" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-[#0F172A] text-sm sm:text-base leading-tight">
-                      Product Designer
-                    </p>
-                    <p className="text-[#94A3B8] text-xs leading-tight">
-                      56 days ago
-                    </p>
-                  </div>
-                </td>
-                <td className=" py-3 font-semibold text-[#0F172A] text-center">
-                  2
-                </td>
-                <td className=" py-3 text-center">201</td>
-                <td className=" py-3 text-center">32</td>
-                <td className=" py-3 text-center">18</td>
-                <td className=" py-3 text-center">14</td>
-                <td className=" py-3 font-semibold text-[#0F172A] text-center pr-4">
-                  0
-                </td>
-              </tr>
-              <tr className="border border-[#E2E8F0] bg-[#F1F5F9]">
-                <td className=" py-3 pl-4 flex items-center space-x-3">
-                  <div className="bg-[#B3C6ED] rounded-full w-10 h-10 flex justify-center items-center">
-                    <IoBag className="text-white w-6 h-6" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-[#0F172A] text-sm sm:text-base leading-tight">
-                      Java Developer
-                    </p>
-                    <p className="text-[#94A3B8] text-xs leading-tight">
-                      46 days ago
-                    </p>
-                  </div>
-                </td>
-                <td className=" py-3 font-semibold text-[#0F172A] text-center">
-                  5
-                </td>
-                <td className=" py-3 text-center">231</td>
-                <td className=" py-3 text-center">23</td>
-                <td className=" py-3 text-center">10</td>
-                <td className=" py-3 text-center">13</td>
-                <td className=" py-3 font-semibold text-[#0F172A] text-center pr-4">
-                  3
-                </td>
-              </tr>
-              <tr className="bg-[#F1F5F9]">
-                <td className=" py-3 pl-4 flex items-center space-x-3">
-                  <div className="bg-[#B3C6ED] rounded-full w-10 h-10 flex justify-center items-center">
-                    <IoBag className="text-white w-6 h-6" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-[#0F172A] text-sm sm:text-base leading-tight">
-                      Product Manager
-                    </p>
-                    <p className="text-[#94A3B8] text-xs leading-tight">
-                      13 days ago
-                    </p>
-                  </div>
-                </td>
-                <td className=" py-3 font-semibold text-[#0F172A] text-center">
-                  3
-                </td>
-                <td className=" py-3 text-center">67</td>
-                <td className=" py-3 text-center">41</td>
-                <td className=" py-3 text-center">22</td>
-                <td className=" py-3 text-center">19</td>
-                <td className=" py-3 font-semibold text-[#0F172A] text-center pr-4">
-                  1
-                </td>
-              </tr>
             </tbody>
           </table>
         </div>
@@ -237,6 +137,7 @@ const MainHome = () => {
               <Meetings />
               <Meetings />
               <Meetings />
+              <Meetings />
             </div>
           </div>
         </div>
@@ -249,7 +150,7 @@ const MainHome = () => {
             <div className="flex flex-col gap-1">
               <Meetings />
               <Meetings />
-              <Meetings color="B0F1B6" />
+              <Meetings />
               <Meetings />
               <Meetings />
               <Meetings />

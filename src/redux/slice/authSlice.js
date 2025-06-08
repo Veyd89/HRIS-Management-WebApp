@@ -4,28 +4,21 @@ import axios from "axios";
 import { useEffect } from "react";
 
 const BASE_URL = "http://localhost:3000/users";
-const localUser = JSON.parse(localStorage.getItem("user"));
-const sessionUser = JSON.parse(sessionStorage.getItem("user"));
 // AsyncThunk	= Payload yang berasal dari return statement dalam fungsi async
 export const loginUser = createAsyncThunk(
   "auth/login",
-  // async ({ email, password }, { rejectWithValue, getState }) => {
-  async (arg, { rejectWithValue, getState }) => {
+  async ({ email, password }, { rejectWithValue, getState }) => {
     console.log(getState());
     try {
       // useEffect(() => {
       //   console.log(getState());
       // }, [getState]);
       const res = await axios.get(
-        `${BASE_URL}?email=${arg.email}&password=${arg.password}`
+        `${BASE_URL}?email=${email}&password=${password}`
       );
       console.log(res.data);
       if (res.data.length > 0) {
-        return {
-          email: arg.email,
-          password: arg.password,
-          remember: arg.remember,
-        };
+        return res.data[0];
       } else {
         return rejectWithValue("Invalid email or password");
       }
@@ -54,8 +47,8 @@ const authSlice = createSlice({
   name: "auth",
   initialState: {
     apiURL: BASE_URL,
-    user: localUser || sessionUser || null,
-    isAuthenticated: !!(localUser || sessionUser),
+    user: null,
+    isAuthenticated: false,
     status: "idle",
     message: "",
     error: null,
@@ -74,15 +67,11 @@ const authSlice = createSlice({
         state.status = "loading";
       })
       .addCase(loginUser.fulfilled, (state, action) => {
+        action.meta.arg;
         state.status = "succeeded";
         state.user = action.payload;
         state.isAuthenticated = true;
         state.error = null;
-        if (action.meta.arg.rememberMe === true) {
-          localStorage.setItem("user", JSON.stringify(action.payload));
-        } else {
-          sessionStorage.setItem("user", JSON.stringify(action.payload));
-        }
       })
       .addCase(loginUser.rejected, (state, action) => {
         state.status = "failed";

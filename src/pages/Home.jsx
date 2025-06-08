@@ -9,7 +9,7 @@ const Home = () => {
   console.log(stateAll);
   console.log;
   return (
-    <section className="pb-6 ">
+    <section className="pb-6 h-full ">
       <HeaderHome />
       <Sidebar />
       <div className="pt-12 pl-40 pr-4">

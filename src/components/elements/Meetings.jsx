@@ -3,7 +3,7 @@ import React from "react";
 const Meetings = ({ color = "A0DBF4" }) => {
   return (
     <div
-      className={`w-full h-12 rounded-lg bg-[#${color}] bg-opacity-[34%] text-[#1B5CBE] flex items-center overflow-hidden`}
+      className={`w-full h-12 rounded-lg bg-[#A0DBF4] bg-opacity-[34%] text-[#1B5CBE] flex items-center overflow-hidden`}
     >
       <span className="border-r border-[#1B5CBE] border-opacity-[44%] px-2.5 h-full text-base flex items-center font-semibold">
         3:15
